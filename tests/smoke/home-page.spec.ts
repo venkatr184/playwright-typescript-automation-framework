@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../../fixtures/page.fixture';
 
 test.describe('QA Playground home page', () => {
-  test('should display the practice application', async ({ page }) => {
+  test('should display the practice application', async ({page,homePage}) => {
     await test.step('Navigate to QA Playground', async () => {
-      await page.goto('/');
+      await homePage.navigate();
     });
 
     await test.step('Verify the page title', async () => {
@@ -11,8 +11,7 @@ test.describe('QA Playground home page', () => {
     });
 
     await test.step('Verify the practice link is visible', async () => {
-      const startPracticingLink = await page.getByRole('link', { name: 'Start Practicing →' })
-      await expect(startPracticingLink).toBeVisible();
+      await expect(homePage.startPracticingLink).toBeVisible();
     });
   });
 });
