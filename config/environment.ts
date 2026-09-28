@@ -32,6 +32,7 @@ function getNumberVariable(name: string, defaultValue: number): number {
 
 export const environment = {
   baseUrl: getRequiredVariable('BASE_URL'),
+  apiBaseUrl: getRequiredVariable('API_BASE_URL'),
   defaultTimeout: getNumberVariable('DEFAULT_TIMEOUT', 30_000),
   expectTimeout: getNumberVariable('EXPECT_TIMEOUT', 10_000),
 };

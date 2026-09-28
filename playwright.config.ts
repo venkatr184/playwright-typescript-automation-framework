@@ -48,6 +48,10 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    {
+    name: 'api',
+    testMatch: '**/api/**/*.spec.ts',
+  },
   ],
   outputDir: 'test-results',
 });
