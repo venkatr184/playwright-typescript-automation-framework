@@ -20,9 +20,6 @@ concurrency:
   group: playwright-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  CI: true
-
 jobs:
   quality:
     name: Quality checks
