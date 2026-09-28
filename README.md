@@ -287,7 +287,7 @@ Failed quality checks or tests return a non-zero exit code, allowing the workflo
 
 ## Author
 
-**Venkata Reddy**  
+**Venkata Reddy K**  
 QA Automation Architect | Playwright | TypeScript | API Automation | CI/CD
 
 - GitHub: [venkatr184](https://github.com/venkatr184)
