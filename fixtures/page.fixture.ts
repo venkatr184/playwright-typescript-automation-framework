@@ -3,11 +3,11 @@ import { HomePage } from '../pages/home.page';
 import { PracticePage } from '../pages/practice.page';
 import { InputFieldsPage } from '../pages/input-fields.page';
 
-type PageFixtures = {
+interface PageFixtures {
   homePage: HomePage;
   practicePage: PracticePage;
   inputFieldsPage: InputFieldsPage;
-};
+}
 
 export const test = base.extend<PageFixtures>({
   homePage: async ({ page }, use) => {

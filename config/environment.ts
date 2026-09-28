@@ -8,18 +8,13 @@ function getRequiredVariable(name: string): string {
   const value = process.env[name];
 
   if (!value) {
-    throw new Error(
-      `Required environment variable "${name}" is missing.`,
-    );
+    throw new Error(`Required environment variable "${name}" is missing.`);
   }
 
   return value;
 }
 
-function getNumberVariable(
-  name: string,
-  defaultValue: number,
-): number {
+function getNumberVariable(name: string, defaultValue: number): number {
   const rawValue = process.env[name];
 
   if (!rawValue) {
@@ -29,9 +24,7 @@ function getNumberVariable(
   const parsedValue = Number(rawValue);
 
   if (Number.isNaN(parsedValue)) {
-    throw new Error(
-      `Environment variable "${name}" must be a valid number.`,
-    );
+    throw new Error(`Environment variable "${name}" must be a valid number.`);
   }
 
   return parsedValue;

@@ -6,7 +6,9 @@ export class PracticePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.inputFieldsHeading = page.getByRole('heading', {name: 'Input Fields'});
+    this.inputFieldsHeading = page.getByRole('heading', {
+      name: 'Input Fields',
+    });
   }
 
   async openInputFields(): Promise<void> {

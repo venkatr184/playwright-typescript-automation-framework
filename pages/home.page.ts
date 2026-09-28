@@ -6,7 +6,8 @@ export class HomePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.startPracticingLink = page.getByRole('link', {name: /Start Practicing →/,
+    this.startPracticingLink = page.getByRole('link', {
+      name: /Start Practicing →/,
     });
   }
 

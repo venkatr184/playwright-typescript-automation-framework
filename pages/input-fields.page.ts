@@ -9,7 +9,7 @@ export class InputFieldsPage {
   constructor(page: Page) {
     this.page = page;
     this.movieNameInput = page.getByTestId('input-movie-name');
-    this.submitButton = page.getByRole('button', {name: 'Submit'});
+    this.submitButton = page.getByRole('button', { name: 'Submit' });
     this.resultMessage = page.getByTestId('result-s01');
   }
 

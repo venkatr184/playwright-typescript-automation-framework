@@ -1,7 +1,10 @@
 import { test, expect } from '../../fixtures/page.fixture';
 
 test.describe('QA Playground home page', () => {
-  test('should display the practice application', async ({page,homePage}) => {
+  test('should display the practice application', async ({
+    page,
+    homePage,
+  }) => {
     await test.step('Navigate to QA Playground', async () => {
       await homePage.navigate();
     });
