@@ -3,7 +3,7 @@ name: Playwright CI
 env:
   CI: true
   BASE_URL: ${{ vars.BASE_URL }}
-  
+
 on:
   pull_request:
     branches: [main]
