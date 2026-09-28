@@ -1,8 +1,4 @@
-import {
-  test as base,
-  expect,
-  type APIRequestContext,
-} from '@playwright/test';
+import { test as base, expect, type APIRequestContext } from '@playwright/test';
 import { PostsClient } from '../api/clients/posts.client';
 import { environment } from '../config/environment';
 import { HomePage } from '../pages/home.page';

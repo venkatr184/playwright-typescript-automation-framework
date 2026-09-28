@@ -1,8 +1,5 @@
 import type { APIRequestContext } from '@playwright/test';
-import type {
-  ApiResult,
-  CreatePostRequest,
-} from '../models/post.model';
+import type { ApiResult, CreatePostRequest } from '../models/post.model';
 
 export class PostsClient {
   constructor(private readonly apiContext: APIRequestContext) {}
