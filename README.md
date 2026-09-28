@@ -226,6 +226,26 @@ Run `npm run check` before pushing changes so that the same validations pass in 
 
 ## Reports and Failure Diagnostics
 
+## Execution Evidence
+
+### Framework Architecture
+
+The framework separates tests, fixtures, page objects, API clients, configuration, and test data to support maintainability and independent execution.
+
+![Framework architecture](docs/images/framework-architecture.png)
+
+### GitHub Actions Pipeline
+
+Pull requests execute quality checks and smoke tests. Changes merged into `main` additionally execute the complete regression suite.
+
+![Successful GitHub Actions pipeline](docs/images/github-actions-pipeline.png)
+
+### Playwright HTML Report
+
+Playwright generates an interactive HTML report containing test results, browser/project information, execution duration, errors, attachments, and traces.
+
+![Playwright HTML report](docs/images/playwright-html-report.png)
+
 After a local test run, open the Playwright HTML report with:
 
 ```bash
