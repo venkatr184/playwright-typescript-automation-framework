@@ -3,6 +3,7 @@ name: Playwright CI
 env:
   CI: true
   BASE_URL: ${{ vars.BASE_URL }}
+  API_BASE_URL: ${{ vars.API_BASE_URL }}
 
 on:
   pull_request:
