@@ -1,8 +1,7 @@
 {
   "name": "playwright-typescript-automation-framework",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portfolio-ready Playwright and TypeScript framework for UI and API test automation with GitHub Actions CI/CD.",
   "scripts": {
     "test": "playwright test",
     "test:env": "cross-env ENV_FILE=.env playwright test",
@@ -29,7 +28,15 @@
     "format:check": "prettier --check .",
     "check": "npm run typecheck && npm run lint && npm run format:check"
   },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test-automation",
+    "ui-testing",
+    "api-testing",
+    "github-actions",
+    "page-object-model"
+  ],
   "type": "commonjs",
   "devDependencies": {
     "@eslint/js": "^10.0.1",

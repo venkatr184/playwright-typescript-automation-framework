@@ -1,15 +1,27 @@
-
-# Playwright
+# Dependencies
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
 
-# Local environment configuration
+# Environment and secrets
 .env
-.DS_Store
+.env.*
+!.env.example
+
+# Playwright output
 playwright-report/
 test-results/
-.env.local
+blob-report/
+
+# Coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
