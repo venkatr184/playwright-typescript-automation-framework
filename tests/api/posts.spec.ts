@@ -20,7 +20,11 @@ function isPost(value: unknown): value is Post {
 }
 
 test.describe('Posts API', () => {
-  test('should retrieve an existing post', async ({ postsClient }) => {
+  test('should retrieve an existing post', 
+  {
+    tag: ['@smoke', '@api'],
+  },
+  async ({ postsClient }) => {
     const result = await postsClient.getPost(1);
 
     expect(result.status).toBe(200);
@@ -36,7 +40,11 @@ test.describe('Posts API', () => {
     expect(result.body.body).not.toBe('');
   });
 
-  test('should create a post', async ({ postsClient }) => {
+  test('should create a post', 
+    {
+      tag: ['@regression', '@api'],
+    },
+  async ({ postsClient }) => {
     const newPost: CreatePostRequest = {
       userId: 1,
       title: 'Playwright API automation',
