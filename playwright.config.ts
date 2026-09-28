@@ -1,8 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
+import { environment } from './config/environment';
 
 export default defineConfig({
   testDir: './tests',
+  timeout: environment.defaultTimeout,
+  expect: {
+    timeout: environment.expectTimeout,
+  },
   fullyParallel: true,
+  
   // forbidOnly: Boolean(process.env.CI),
   // retries: process.env.CI ? 2 : 0,
   // workers: process.env.CI ? 1 : undefined,
@@ -15,7 +21,7 @@ export default defineConfig({
     ['html', {outputFolder: 'playwright-report', open: 'never'}]],
 
   use: {
-    baseURL: 'https://qaplayground.com',
+    baseURL: environment.baseUrl,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
