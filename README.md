@@ -238,7 +238,7 @@ The framework separates tests, fixtures, page objects, API clients, configuratio
 
 Pull requests execute quality checks and smoke tests. Changes merged into `main` additionally execute the complete regression suite.
 
-![Successful GitHub Actions pipeline](docs/images/github-actions-pipeline.png)
+![Successful GitHub Actions pipeline](docs/images/github-actions-pipeline.PNG)
 
 ### Playwright HTML Report
 
