@@ -2,7 +2,16 @@ import dotenv from 'dotenv';
 
 dotenv.config({
   path: process.env.ENV_FILE ?? '.env',
+  quiet: true,
 });
+
+const baseUrl = process.env.BASE_URL;
+
+if (!baseUrl) {
+  throw new Error(
+    'BASE_URL is required. Define it in .env locally or as a GitHub Actions variable.',
+  );
+}
 
 function getRequiredVariable(name: string): string {
   const value = process.env[name];
@@ -31,7 +40,8 @@ function getNumberVariable(name: string, defaultValue: number): number {
 }
 
 export const environment = {
-  baseUrl: getRequiredVariable('BASE_URL'),
+  baseUrl,
+  // baseUrl: getRequiredVariable('BASE_URL'),
   apiBaseUrl: getRequiredVariable('API_BASE_URL'),
   defaultTimeout: getNumberVariable('DEFAULT_TIMEOUT', 30_000),
   expectTimeout: getNumberVariable('EXPECT_TIMEOUT', 10_000),
