@@ -58,17 +58,17 @@ flowchart TD
 
 ### Architectural Responsibilities
 
-| Layer | Responsibility |
-| --- | --- |
-| Tests | Business scenarios, assertions, tags, and test intent |
-| Fixtures | Dependency injection and reusable test setup |
-| Page Objects | UI locators and reusable browser interactions |
-| API Clients | REST endpoint interactions and API operations |
-| API Models | Strongly typed request/response structures |
-| Test Data | Scenario input separated from test implementation |
-| Configuration | Environment-specific runtime values |
+| Layer             | Responsibility                                                   |
+| ----------------- | ---------------------------------------------------------------- |
+| Tests             | Business scenarios, assertions, tags, and test intent            |
+| Fixtures          | Dependency injection and reusable test setup                     |
+| Page Objects      | UI locators and reusable browser interactions                    |
+| API Clients       | REST endpoint interactions and API operations                    |
+| API Models        | Strongly typed request/response structures                       |
+| Test Data         | Scenario input separated from test implementation                |
+| Configuration     | Environment-specific runtime values                              |
 | Playwright Config | Projects, browsers, retries, workers, reporters, and diagnostics |
-| CI/CD | Automated quality checks and suite execution |
+| CI/CD             | Automated quality checks and suite execution                     |
 
 ### Execution Flow
 
@@ -133,23 +133,23 @@ playwright-typescript-automation-framework/
 
 ## Technology Stack
 
-| Area | Technology |
-| --- | --- |
-| Test framework | Playwright Test |
-| Programming language | TypeScript |
-| Runtime | Node.js |
-| UI automation | Playwright browser automation |
-| API automation | Playwright APIRequestContext / typed API client layer |
-| UI design pattern | Page Object Model |
-| Dependency management | Playwright custom fixtures |
-| API design | Typed client and model layers |
-| Test strategy | Smoke, regression, UI, API, and cross-browser testing |
-| Configuration | dotenv and cross-env |
-| Static analysis | TypeScript compiler and ESLint |
-| Formatting | Prettier |
-| CI/CD | GitHub Actions |
-| Reporting | Playwright HTML reporter and test artifacts |
-| Diagnostics | Screenshots, videos, and Playwright traces |
+| Area                  | Technology                                            |
+| --------------------- | ----------------------------------------------------- |
+| Test framework        | Playwright Test                                       |
+| Programming language  | TypeScript                                            |
+| Runtime               | Node.js                                               |
+| UI automation         | Playwright browser automation                         |
+| API automation        | Playwright APIRequestContext / typed API client layer |
+| UI design pattern     | Page Object Model                                     |
+| Dependency management | Playwright custom fixtures                            |
+| API design            | Typed client and model layers                         |
+| Test strategy         | Smoke, regression, UI, API, and cross-browser testing |
+| Configuration         | dotenv and cross-env                                  |
+| Static analysis       | TypeScript compiler and ESLint                        |
+| Formatting            | Prettier                                              |
+| CI/CD                 | GitHub Actions                                        |
+| Reporting             | Playwright HTML reporter and test artifacts           |
+| Diagnostics           | Screenshots, videos, and Playwright traces            |
 
 ## Test Automation Strategy
 
@@ -224,30 +224,30 @@ npm test
 
 ### Tagged suites
 
-| Suite | Command |
-| --- | --- |
-| Smoke | `npm run test:smoke` |
+| Suite      | Command                   |
+| ---------- | ------------------------- |
+| Smoke      | `npm run test:smoke`      |
 | Regression | `npm run test:regression` |
-| UI | `npm run test:ui-suite` |
-| API | `npm run test:api-suite` |
+| UI         | `npm run test:ui-suite`   |
+| API        | `npm run test:api-suite`  |
 
 ### Browser-specific execution
 
-| Browser/project | Command |
-| --- | --- |
-| Chromium | `npm run test:chromium` |
-| Firefox | `npm run test:firefox` |
-| WebKit | `npm run test:webkit` |
-| API project | `npm run test:api` |
+| Browser/project | Command                 |
+| --------------- | ----------------------- |
+| Chromium        | `npm run test:chromium` |
+| Firefox         | `npm run test:firefox`  |
+| WebKit          | `npm run test:webkit`   |
+| API project     | `npm run test:api`      |
 
 ### Interactive and debugging modes
 
-| Mode | Command |
-| --- | --- |
-| Headed | `npm run test:headed` |
-| Playwright UI | `npm run test:ui` |
-| Debug | `npm run test:debug` |
-| Explicit `.env` file | `npm run test:env` |
+| Mode                 | Command               |
+| -------------------- | --------------------- |
+| Headed               | `npm run test:headed` |
+| Playwright UI        | `npm run test:ui`     |
+| Debug                | `npm run test:debug`  |
+| Explicit `.env` file | `npm run test:env`    |
 
 ### List tests without executing them
 
@@ -262,12 +262,12 @@ npm run test:api-suite_list
 
 Tests are organized using Playwright title tags:
 
-| Tag | Purpose |
-| --- | --- |
-| `@smoke` | Fast validation of critical functionality |
-| `@regression` | Broader functional regression coverage |
-| `@ui` | Browser-based UI coverage |
-| `@api` | REST API coverage |
+| Tag           | Purpose                                   |
+| ------------- | ----------------------------------------- |
+| `@smoke`      | Fast validation of critical functionality |
+| `@regression` | Broader functional regression coverage    |
+| `@ui`         | Browser-based UI coverage                 |
+| `@api`        | REST API coverage                         |
 
 A test can belong to more than one suite, allowing the same scenario to support multiple execution strategies without duplication.
 
@@ -340,12 +340,12 @@ The Playwright HTML report contains test results, browser/project information, e
 
 The workflow is defined in `.github/workflows/playwright.yml`.
 
-| Trigger | Quality checks | Smoke tests | Full regression |
-| --- | ---: | ---: | ---: |
-| Pull request to `main` | Yes | Yes | No |
-| Push to `main` | Yes | Yes | Yes |
-| Weekday schedule | Yes | No | Yes |
-| Manual execution | Yes | Yes | Yes |
+| Trigger                | Quality checks | Smoke tests | Full regression |
+| ---------------------- | -------------: | ----------: | --------------: |
+| Pull request to `main` |            Yes |         Yes |              No |
+| Push to `main`         |            Yes |         Yes |             Yes |
+| Weekday schedule       |            Yes |          No |             Yes |
+| Manual execution       |            Yes |         Yes |             Yes |
 
 The GitHub Actions pipeline provides:
 
